@@ -8,6 +8,8 @@ It aim to discover, learn and use some features supplied by Dapr and Docker cont
 
 We simulate a small grid where multiple energy producing systems are controlled to ensure a constant energy production.
 
+Miight be too complex...
+
 ### Components
 
 - Energy Meters located by the consumer
@@ -51,7 +53,17 @@ The device might raises alarms emited to the grid control
 
 ## Variant B
 
-It simulates a fleet of machines being operated worldwide and reporting their current activities. According to the reported status the system decides to trigger some operations.
+It simulates a fleet of machines being operated accross the country or even furthe. They periodilcaly report their current activities and status. 
+
+Information are gathered by a centralized controling center that, based on the reported information trigger actions.
+
+Actions are send to mechanics or other maintenance workforce to work on the individual machines.
+
+The employees receiving the order to act on machine will have to clock-in/clock-out their activities on the machines.
+
+Central operators can view the state of all machines, the pending activities by machine or workforce, and the completed tasks and their associated info.
+
+
 
 ## How to use
 
