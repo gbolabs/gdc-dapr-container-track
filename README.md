@@ -63,6 +63,16 @@ The employees receiving the order to act on machine will have to clock-in/clock-
 
 Central operators can view the state of all machines, the pending activities by machine or workforce, and the completed tasks and their associated info.
 
+- Machines
+  Periodicaly post a status message to a Queue using a Dapr Endpoint
+- Logistic Center
+  - Receives shippment orders through Dapr communication (pub/sub)
+  - Persists spare part inventory
+  - Exposes method to retrive current inventory state of spare part
+- Maintenance Workforce
+  - Receives intervention orders to maintain and fix machines
+  - Receives confirmation spare parts have been delivered to the machine's location (unblock maintenance activities)
+- Operation Centter
 
 
 ## How to use
