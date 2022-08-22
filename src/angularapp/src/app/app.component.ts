@@ -20,6 +20,10 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.CurrentWeather = this.weatherService.getForecast();
+    this.loadWeatherForecast();
+  }
+
+  loadWeatherForecast(): void {
+    this.weatherService.getForecast().subscribe(w => this.CurrentWeather = w);
   }
 }
