@@ -1,12 +1,4 @@
 <h1>
-  Welcome
+  Weather Forecast
 </h1>
-<div>
-  {{CurrentWeather?.summary}}
-</div>
-<div>
-  {{CurrentWeather?.temperatureC}}
-</div>
-<div>
-  {{CurrentWeather?.date}}
-</div>
+<app-weatherforecastdetail [forecast]="todayForecast"></app-weatherforecastdetail>

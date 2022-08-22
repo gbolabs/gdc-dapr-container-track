@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Weatherforecast } from './wheater/weatherforecast';
 import { WheaterforecastService } from './wheater/wheaterforecast.service';
+import { WeatherforecastdetailComponent } from './weatherforecastdetail/weatherforecastdetail.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { WheaterforecastService } from './wheater/wheaterforecast.service';
 export class AppComponent {
   title = 'ngapp';
 
-  CurrentWeather: Weatherforecast | undefined;
+  todayForecast?: Weatherforecast;
 
   /**
    *
@@ -24,6 +25,7 @@ export class AppComponent {
   }
 
   loadWeatherForecast(): void {
-    this.weatherService.getForecast().subscribe(w => this.CurrentWeather = w);
+    
+    this.weatherService.getToday().subscribe(w => this.todayForecast = w);
   }
 }
