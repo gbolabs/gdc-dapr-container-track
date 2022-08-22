@@ -12,7 +12,6 @@ export class AppComponent {
   title = 'ngapp';
 
   todayForecast?: Weatherforecast;
-  tomorrowForecast?: Weatherforecast;
 
   /**
    *
@@ -26,7 +25,7 @@ export class AppComponent {
   }
 
   loadWeatherForecast(): void {
+    
     this.weatherService.getToday().subscribe(w => this.todayForecast = w);
-    this.weatherService.getTomorrow().subscribe(w => this.tomorrowForecast = w);
   }
 }
