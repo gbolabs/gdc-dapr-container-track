@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi", "webapi\webapi.csproj", "{196E916C-24FD-475B-9AD4-52242B11641F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gdc-dapr-container-track", "azfunc\gdc-dapr-container-track.csproj", "{C1A3380B-EC01-4E9A-8B0C-A9317B5A22D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,5 +24,9 @@ Global
 		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A3380B-EC01-4E9A-8B0C-A9317B5A22D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A3380B-EC01-4E9A-8B0C-A9317B5A22D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A3380B-EC01-4E9A-8B0C-A9317B5A22D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A3380B-EC01-4E9A-8B0C-A9317B5A22D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
