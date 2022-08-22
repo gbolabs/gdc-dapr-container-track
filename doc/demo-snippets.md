@@ -28,12 +28,38 @@ wget http://127.0.0.1:35001/weatherforecast/tomorrow | select -ExpandProperty co
 
 # Add the second record the Angular Application
 
-Within the service
+- Within the `src/angularapp/src/app/wheater/wheaterforecast.service.ts` service
+  ```typescript
+  getTomorrow(): Observable<Weatherforecast> {
 
-```typescript
+    // return of<Weatherforecast>(CurrentWeatherforecast);
 
+    return this.http.get<Weatherforecast>("http://127.0.0.1:35001/weatherforecast/tomorrow");
+  }
+  ```
+- Within the `src/angularapp/src/app/app.component.html`
+  ```html
+  <app-weatherforecastdetail [forecast]="tomorrowForecast"></app-weatherforecastdetail>
+  ```
+- Within `src/angularapp/src/app/app.component.ts`
+  ```typescript
+  tomorrowForecast?: Weatherforecast;
+  ```
+  ```typescript
+    this.weatherService.getTomorrow().subscribe(w => this.tomorrowForecast = w);
+  ```
+
+# Add Angular CLI in Dev container
+In `.devcontainer/angularapp/devcontainer.json`
+```json
+				"angular.ng-template"
 ```
 
+In `.devcontainer/angularapp/Dockerfile`
+```yml
+# Install the Angular CLI
+RUN su node -c "npm install --location=global @angular/cli"
+```
 
 # Tricks
 - Show the codespace name
