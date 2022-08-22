@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "gdc_dapr_container_track": {
+    "azfunc": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7029",
+      "commandLineArgs": "--port 7010",
       "launchBrowser": false
     }
   }
