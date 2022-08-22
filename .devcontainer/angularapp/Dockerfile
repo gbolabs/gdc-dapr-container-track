@@ -2,6 +2,3 @@
 
 ARG VARIANT=16-bullseye
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
-
-# Install the Angular CLI
-RUN su node -c "npm install --location=global @angular/cli"
