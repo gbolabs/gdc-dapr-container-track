@@ -35,10 +35,6 @@ app.MapGet("/weatherforecast/today", (IWeatherForecastService weatherForecastSer
     return weatherForecastService.Generate().First();
 }).RequireCors(MyAllowSpecificOrigins);
 
-app.MapGet("/weatherforecast/tomorrow", (IWeatherForecastService weatherForecastService) =>
-{
-    return weatherForecastService.Generate().First();
-}).RequireCors(MyAllowSpecificOrigins);
-
+// HERE
 
 app.Run();
