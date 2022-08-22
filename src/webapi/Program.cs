@@ -1,21 +1,21 @@
+using webapi.services;
+
 var builder = WebApplication.CreateBuilder(args);
+const string MyAllowSpecificOrigins = "_mySpecificCorsRules";
 
 // Add services to the container.
-const string MyAllowSpecificOrigins = "development";
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       builder =>
                       {
-                          builder.WithOrigins("https://stopr114emp001.z1.web.core.windows.net",
-                              "https://energy.isago.ch",
-                                                "http://localhost:4200",
-                                              "http://localhost");
+                          builder.WithOrigins("http://localhost:4200");
+                          builder.WithOrigins("http://127.0.0.1:4200");
                       });
 });
 
@@ -27,7 +27,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseAuthorization();
-app.MapControllers();
 app.UseCors();
+
+app.MapGet("/", () => "Hello CORS!").RequireCors(MyAllowSpecificOrigins).Produces(200, contentType: "application/json");
+app.MapGet("/weatherforecast", (IWeatherForecastService weatherForecastService) =>
+{
+    return weatherForecastService.Generate().First();
+}).RequireCors(MyAllowSpecificOrigins);
+
+
 app.Run();

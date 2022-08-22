@@ -1,25 +1,15 @@
-using Microsoft.AspNetCore.Mvc;
+using webapi.model;
 
-namespace webapi.Controllers;
+namespace webapi.services;
 
-[ApiController]
-[Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+internal class WeatherForecastService : IWeatherForecastService
 {
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
-    }
-
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public IEnumerable<WeatherForecast> Generate()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
@@ -29,4 +19,9 @@ public class WeatherForecastController : ControllerBase
         })
         .ToArray();
     }
+}
+
+internal interface IWeatherForecastService
+{
+    IEnumerable<WeatherForecast> Generate();
 }
