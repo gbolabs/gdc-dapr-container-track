@@ -30,7 +30,12 @@ if (app.Environment.IsDevelopment())
 app.UseCors();
 
 app.MapGet("/", () => "Hello CORS!").RequireCors(MyAllowSpecificOrigins).Produces(200, contentType: "application/json");
-app.MapGet("/weatherforecast", (IWeatherForecastService weatherForecastService) =>
+app.MapGet("/weatherforecast/today", (IWeatherForecastService weatherForecastService) =>
+{
+    return weatherForecastService.Generate().First();
+}).RequireCors(MyAllowSpecificOrigins);
+
+app.MapGet("/weatherforecast/tomorrow", (IWeatherForecastService weatherForecastService) =>
 {
     return weatherForecastService.Generate().First();
 }).RequireCors(MyAllowSpecificOrigins);
