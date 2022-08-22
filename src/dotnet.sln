@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi", "webapi.csproj", "{196E916C-24FD-475B-9AD4-52242B11641F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi", "webapi\webapi.csproj", "{196E916C-24FD-475B-9AD4-52242B11641F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,9 @@ Global
 		{196E916C-24FD-475B-9AD4-52242B11641F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{196E916C-24FD-475B-9AD4-52242B11641F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{196E916C-24FD-475B-9AD4-52242B11641F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEF8D7A-22B3-4B61-9262-DEF7089A4056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
