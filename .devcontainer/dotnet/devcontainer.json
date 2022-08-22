@@ -35,7 +35,7 @@
 	"features": {
 		"git": "os-provided",
 		"azure-cli": "latest",
-		"docker-from-docker": "latest"
-		
+		"docker-from-docker": "latest",
+		"github-cli": "latest"
 	}
 }
