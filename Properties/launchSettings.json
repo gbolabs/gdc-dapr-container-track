@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "gdc_dapr_container_track": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7029",
+      "launchBrowser": false
+    }
+  }
+}
