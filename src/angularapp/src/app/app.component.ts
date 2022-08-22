@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Weatherforecast } from './wheater/weatherforecast';
+import { WheaterforecastService } from './wheater/wheaterforecast.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngapp';
+
+  CurrentWeather: Weatherforecast | undefined;
+
+  /**
+   *
+   */
+  constructor(private weatherService: WheaterforecastService) {
+
+  }
+
+  ngOnInit(): void {
+    this.CurrentWeather = this.weatherService.getForecast();
+  }
 }
