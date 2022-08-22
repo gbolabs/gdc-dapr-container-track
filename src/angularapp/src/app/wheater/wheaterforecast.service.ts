@@ -15,8 +15,8 @@ export class WheaterforecastService {
 
   getForecast(): Observable<Weatherforecast> {
 
-    return of<Weatherforecast>(CurrentWeatherforecast);
+    // return of<Weatherforecast>(CurrentWeatherforecast);
 
-    // return this.http.get<Weatherforecast>("http://127.0.0.1:5244/weatherforecast");
+    return this.http.get<Weatherforecast>("http://127.0.0.1:5244/weatherforecast");
   }
 }

@@ -1,7 +1,7 @@
 import { Time } from "@angular/common";
 
 export interface Weatherforecast {
-    temperature: number;
+    temperatureC: number;
     summary: string;
     date: Date;
 }
