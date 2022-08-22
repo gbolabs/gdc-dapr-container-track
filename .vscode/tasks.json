@@ -61,6 +61,7 @@
       "command": "dotnet",
       "args": [
         "clean",
+        "${workspaceFolder}/src/azfunc/gdc-dapr-container-track.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -72,6 +73,7 @@
       "command": "dotnet",
       "args": [
         "build",
+        "${workspaceFolder}/src/azfunc/gdc-dapr-container-track.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -88,6 +90,7 @@
       "command": "dotnet",
       "args": [
         "clean",
+        "${workspaceFolder}/src/azfunc/gdc-dapr-container-track.csproj",
         "--configuration",
         "Release",
         "/property:GenerateFullPaths=true",
@@ -101,6 +104,7 @@
       "command": "dotnet",
       "args": [
         "publish",
+        "${workspaceFolder}/src/azfunc/gdc-dapr-container-track.csproj",
         "--configuration",
         "Release",
         "/property:GenerateFullPaths=true",
@@ -114,7 +118,7 @@
       "type": "func",
       "dependsOn": "build (functions)",
       "options": {
-        "cwd": "${workspaceFolder}/bin/Debug/net6.0"
+        "cwd": "${workspaceFolder}/src/azfunc/bin/Debug/net6.0"
       },
       "command": "host start",
       "isBackground": true,
